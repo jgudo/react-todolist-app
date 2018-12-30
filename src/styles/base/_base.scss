@@ -1,0 +1,35 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    background: $dark-blue;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p, 
+span,
+input,
+::-webkit-input-placeholder,
+::placeholder  {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}   

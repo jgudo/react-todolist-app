@@ -1,0 +1,34 @@
+.header {
+    background: $off-black;
+    margin-bottom: $xl-size;
+    padding: $m-size 0;
+    color: #fff;
+}
+
+.header-wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 $m-size;
+}
+
+.header__title {
+    font-size: $l-size;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header__subtitle {
+    font-size: $m-size;
+    color: $off-white;
+    margin: 0;
+    font-weight: normal;
+}
+
+@media(max-width: $mobile){
+    .header__title {
+        font-size: $m-size;
+    }
+    .header__subtitle {
+        font-size: $s-size;
+    }
+}
