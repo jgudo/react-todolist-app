@@ -1,10 +1,11 @@
 .widget {
-    background: $light-blue;
+    background: lighten($dark-blue, 2%);
     padding-bottom: $m-size;
+    margin-bottom: $m-size;
 }
 
 .widget-header {
-    background: $blue;   
+    background: lighten($dark-blue, 4%);   
     color: $off-white;
     padding: $m-size;
     display: flex;
@@ -21,7 +22,7 @@
     color: $off-white;
     text-align: center;
     padding: $m-size;
-    border-bottom: 1px solid lighten($light-blue, 10%);
+    //border-bottom: 1px solid lighten($light-blue, 10%);
     font-size: $m-size;
     font-weight: bold;
 }

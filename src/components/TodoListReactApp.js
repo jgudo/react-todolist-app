@@ -68,9 +68,8 @@ class TodoListReactApp extends React.Component  {
             <div>
                 <Header subtitle={subtitle} />
                 <div className="container">
-                    <Action 
-                        hasOption={this.props.options.length > 0}
-                        handlePick={this.handlePick}
+                    <AddOption 
+                        handleAddOption={this.handleAddOption}
                     />
                     <div className="widget">
                         <Options 
@@ -78,11 +77,11 @@ class TodoListReactApp extends React.Component  {
                             handleDeleteAll={this.handleDeleteAll}
                             handleDeleteOption={this.handleDeleteOption}
                         />
-                        <AddOption 
-                            handleAddOption={this.handleAddOption}
-                        />
                     </div>
-
+                    <Action 
+                        hasOption={this.props.options.length > 0}
+                        handlePick={this.handlePick}
+                    />
                 </div>
                 <OptionModal
                     selectedOption={this.state.selected} 
