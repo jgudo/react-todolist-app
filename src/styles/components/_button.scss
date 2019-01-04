@@ -33,6 +33,40 @@
     border: none;
     color: transparentize($off-black, .2);
     background: none;
+    
+}
+
+.button--remove {
+    background: transparentize($off-black, .5);
+    border-bottom: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    position: relative;
+    margin-right: $m-size;
+    margin-top: $s-size;
+    &:hover {
+        background: $off-black;
+    }
+
+    div{
+        width: 15px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    div:first-child {
+        transform: rotate(45deg);
+    }
+    div:last-child {
+        transform: rotate(-45deg);
+    }
 }
 
 .button--add {
@@ -64,5 +98,9 @@
 
     .button--link {
         font-size: $m-size;
+        padding: 0;
+    }
+    .button--remove {
+        margin-right: 0;
     }
 }

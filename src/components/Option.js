@@ -5,11 +5,12 @@ const Option = (props) => {
         <div className="option">
             <p className="option__name">{props.count + '. ' + props.optionVal}</p>
             <button 
-                className="button button--link"
+                className="button button--remove"
                 onClick={(e) => {
                     props.handleDeleteOption(props.optionVal);
             }}> 
-                Remove
+                <div></div>
+                <div></div>
             </button>
         </div>
     );
