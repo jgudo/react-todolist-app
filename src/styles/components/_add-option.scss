@@ -1,6 +1,6 @@
 .add-option-error {
     font-style: italic;
-    color: $off-white;
+    color: red;
     padding: 0 $m-size;
     margin: $m-size 0 0 0;
 }
@@ -8,20 +8,33 @@
 .add-option {
     display: flex;
     //padding: $l-size $m-size 0;
-    margin-bottom: $m-size;
+    margin-bottom: $xl-size;
+    flex-direction: column;
+    position: relative;
 }
 
 .add-option__input {
     flex-grow: 1;
-    background: $dark-blue;
+    //background: $dark-blue;
+    background: transparent;
     border: none;
     border-bottom: .1rem solid rgba(255,255,255,.3);
     padding: $m-size;
     color: #fff;
     margin-right: $m-size;
+    font-size: $l-size;
     
     &:focus {
         outline: none;
+    }
+
+    &::placeholder {
+        font-size: $l-size;
+        color: #fff;
+    }
+    &::-webkit-input-placeholder {
+        font-size: $l-size;
+        color: #fff;
     }
 }
 

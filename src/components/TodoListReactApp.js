@@ -45,7 +45,7 @@ class TodoListReactApp extends React.Component  {
 
     handleAddOption = (option) => {
         if(!option) {
-            return 'Can\'t be blank'; 
+            return 'Task must not be empty, please add something'; 
         } else if(this.props.options.indexOf(option) > -1) {
             return 'Already exists';
         }
@@ -66,7 +66,6 @@ class TodoListReactApp extends React.Component  {
         const subtitle = 'Put Your Life in the Hands of Computer';
         return (
             <div>
-                <Header subtitle={subtitle} />
                 <div className="container">
                     <AddOption 
                         handleAddOption={this.handleAddOption}

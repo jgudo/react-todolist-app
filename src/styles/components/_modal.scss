@@ -18,18 +18,20 @@
 }
 
 .modal {
-    background: $light-blue;
+    background: $d-blue;
     padding: $l-size $xl-size;
     text-align: center;
     outline: none;
     word-break: break-all;
     max-width: 30rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
 .modal__title {
     color: #fff;
     padding-bottom: $m-size;
-    border-bottom: 1px solid lighten($light-blue, 10%);
+    border-bottom: 1px solid $l-blue;
 }
 
 .modal__selected {
@@ -42,10 +44,10 @@
 
 .modal__button {
     border: none;
-    background: $purple;
-    color: #fff;
-    border-bottom: .3rem solid darken($purple, 10%);
+    background: $yellow;
+    color: $off-black;
     padding: $m-size;
     font-weight: bold;
     width: 100%;
+    border-radius: 10px;
 }

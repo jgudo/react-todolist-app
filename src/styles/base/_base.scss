@@ -1,11 +1,14 @@
 html {
     font-size: 62.5%;
+    height: auto;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
-    background: $dark-blue;
+    height: auto;
+    background: linear-gradient(45deg, $l-blue 60%, $d-blue) no-repeat center;
+    padding-bottom: 15rem;
 }
 
 h1, 
@@ -32,4 +35,4 @@ button:hover {
 
 button:focus {
     outline: none;
-}   
+}

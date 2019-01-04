@@ -1,14 +1,31 @@
 .option {
     display: flex;
     justify-content: space-between;
-    padding: $l-size $m-size;
+    padding: $l-size;
     //border-bottom: 1px solid lighten($light-blue, 10%);
-    
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        margin: auto;
+        width: 85%;
+        height: 1px;
+        background: transparentize($off-black, .9);
+
+    }
+
+    &:last-child:after{
+        background: transparent;
+    }
 }
 
 .option__name {
     font-size: $m-size;
-    color: #fff;
+    color: $off-black;
     font-weight: bold;
     margin-right: $m-size;
     word-break: break-all;

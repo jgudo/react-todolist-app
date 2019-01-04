@@ -1,20 +1,36 @@
 .widget {
-    background: lighten($dark-blue, 2%);
+    background: #fff;
     padding-bottom: $m-size;
     margin-bottom: $m-size;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
 }
 
 .widget-header {
-    background: lighten($dark-blue, 4%);   
-    color: $off-white;
-    padding: $m-size;
+    //background: lighten($dark-blue, 4%);   
+    color: $blue;
+    padding: $m-size $l-size;
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 95%;
+        height: 1px;
+        background: transparentize($off-black, .9);
+    }
 }
 
 .widget-header__title {
     margin: 0;
     margin-top: 10px;
+    color: transparentize($off-black, .3);
     
 }
 
