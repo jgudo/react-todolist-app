@@ -24,8 +24,8 @@ store.subscribe( () => {
 ReactDOM.render(
     <Provider store={store}>
         <TodoListReactApp  />
-    </Provider>
-, 
-    document.getElementById('app'));
+    </Provider>, 
+    document.getElementById('app')
+);
 
 

@@ -1,14 +1,12 @@
 import React from 'react';
 import {connect } from 'react-redux';
 import AddOption from './AddOption';
-import Header from './Header';
 import Action from './Action';
 import Options from './Options';
 import OptionModal from './OptionModal';
 import {addOption, removeOption , setOptions, removeAllOptions} from '../redux/configureStore';
 
 class TodoListReactApp extends React.Component  {
-
     state = {
         modalIsOpen: false,
         selected: undefined
@@ -63,7 +61,6 @@ class TodoListReactApp extends React.Component  {
     }
     
     render() {
-        const subtitle = 'Put Your Life in the Hands of Computer';
         return (
             <div>
                 <div className="container">
