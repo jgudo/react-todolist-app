@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
-    "build:prod": "webpack -p --env production",
+    "build:prod": "webpack --mode production --env production",
     "dev-server": "webpack-dev-server --mode development",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
@@ -38,6 +38,7 @@
     "sass-loader": "^7.1.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "workbox-webpack-plugin": "^3.6.3"
   }
 }

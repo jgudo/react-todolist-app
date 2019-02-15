@@ -1,14 +1,15 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const workboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = (env) => {
     const isProduction = env === 'production';
     const CSSExtract = new ExtractTextPlugin("styles.css");
 
     return {
-        entry: ['@babel/polyfill', './src/app.js'],
+        entry: ['@babel/polyfill', './src/index.js'],
         output: {
-            path: path.join(__dirname, 'public', 'dist'),
+            path: path.join(__dirname, 'public'),
             filename: 'app.bundle.js'
         },
         module: {
@@ -35,13 +36,20 @@ module.exports = (env) => {
             }]
         },
         plugins: [
-            CSSExtract
+            CSSExtract,
+            new workboxPlugin.GenerateSW({
+                cacheId: 'todo-app',
+                swDest: 'sw.js',
+                navigateFallback: '/index.html',
+                clientsClaim: true,
+                skipWaiting: true
+              })
         ],
         //devtool: 'inline-source-map',
         devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: path.join(__dirname, 'public'),
-            publicPath: '/dist/' 
+            publicPath: '/' 
         }
     }
 }
