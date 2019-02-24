@@ -1,3 +1,3 @@
 # Live Demo 
 
-visit live demo at <https://todo-list-react-app.herokuapp.com>
+visit live demo at <https://todolistko.netlify.com>
